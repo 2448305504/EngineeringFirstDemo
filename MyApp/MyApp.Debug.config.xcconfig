@@ -1,0 +1,4 @@
+// clang
+// /Users/xxx/Desktop/MyApp/MyApp/MyModule/module.modulemap
+//OTHER_CFLAGS = "-fmodule-map-file=${SRCROOT}/MyApp/MyModule/module.modulemap"
+OTHER_CFLAGS = "-fmodule-map-file=${SRCROOT}/MyApp/MyModule.framework/module.modulemap"

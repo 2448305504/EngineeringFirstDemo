@@ -1,0 +1,24 @@
+
+// Teacher module
+framework module Teacher {
+    // umbrella -> 一组
+    umbrella header "Teacher-umbrella.h"
+    // Teacher.h -> Foundation
+    export *
+    
+    // 如果使用了 Teacher-umbrella.h 导入 Teacher.h，在子module中就必须使用通配符 module *
+    module * {
+        export *
+    }
+    
+    
+    /* 1.如果这种方式声明子module，就不能在Teacher-umbrella.h去导入 Teacher.h
+        2.explicit -> 只有在显式地使用 @import Teacher,Teacher; 才会引用 Teacher module 里的 header，否则在 使用 @import Teacher; 就不会引入。
+     */
+    /*
+    explicit module Teacher {
+        header "Teacher.h"
+        export *
+    }
+    */
+}
